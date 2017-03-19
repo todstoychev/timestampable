@@ -1,0 +1,22 @@
+{
+    "name": "todstoychev/timestampable",
+    "description": "Automatic timestamps for Symfony entities.",
+    "type": "bundle",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "todstoychev",
+            "email": "todstoychev@gmail.com"
+        }
+    ],
+    "minimum-stability": "stable",
+    "require": {
+        "php": ">=7.0",
+        "symfony/symfony": "~3.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Todstoychev\\": "src/"
+        }
+    }
+}
