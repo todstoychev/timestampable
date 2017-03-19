@@ -28,3 +28,5 @@ class MyEntity implements TimestampableInterface
 ```
 
 Timestampable trait adds to entity 2 fields: createdAt and updatedAt. Describe those 2 in your entity configuration. If you are using anotations, override those 2 properties in your entity class.
+
+That's all.
