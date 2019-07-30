@@ -19,13 +19,19 @@ use Todstoychev\TimestampableBundle\Entity\TimestampableInterface;
  **/
 interface EntityListenerInterface
 {
-    /** @PrePersist */
+    /** @PrePersist
+     * @param TimestampableInterface $entity
+     * @param LifecycleEventArgs $event
+     */
     public function prePersistHandler(TimestampableInterface $entity, LifecycleEventArgs $event);
 
 //    /** @PostPersist */
 //    public function postPersistHandler(TimestampableInterface $entity, LifecycleEventArgs $event);
 
-    /** @PreUpdate */
+    /** @PreUpdate
+     * @param TimestampableInterface $entity
+     * @param PreUpdateEventArgs $event
+     */
     public function preUpdateHandler(TimestampableInterface $entity, PreUpdateEventArgs $event);
 
 //    /** @PostUpdate */

@@ -4,6 +4,7 @@ namespace Todstoychev\TimestampableBundle\Listener;
 
 use Doctrine\ORM\Event\LifecycleEventArgs;
 use Doctrine\ORM\Event\PreUpdateEventArgs;
+use Exception;
 use Todstoychev\TimestampableBundle\Entity\TimestampableInterface;
 
 /**
@@ -17,6 +18,7 @@ class EntityListener implements EntityListenerInterface
     /** @PreUpdate
      * @param TimestampableInterface $entity
      * @param PreUpdateEventArgs $event
+     * @throws Exception
      */
     public function preUpdateHandler(TimestampableInterface $entity, PreUpdateEventArgs $event)
     {
@@ -24,8 +26,9 @@ class EntityListener implements EntityListenerInterface
     }
 
     /** @PrePersist
-     * @param \Todstoychev\TimestampableBundle\Entity\TimestampableInterface $entity
-     * @param \Doctrine\Common\Persistence\Event\LifecycleEventArgs $event
+     * @param TimestampableInterface $entity
+     * @param LifecycleEventArgs $event
+     * @throws Exception
      */
     public function prePersistHandler(TimestampableInterface $entity, LifecycleEventArgs $event)
     {
