@@ -2,6 +2,9 @@
 
 namespace Todstoychev\TimestampableBundle\Entity;
 
+use DateTime;
+use DateTimeInterface;
+
 /**
  * TimestampableInterface
  *
@@ -11,26 +14,26 @@ namespace Todstoychev\TimestampableBundle\Entity;
 interface TimestampableInterface
 {
     /**
-     * @return \DateTime
+     * @return DateTimeInterface
      */
-    public function getCreatedAt();
+    public function getCreatedAt(): ?DateTimeInterface;
 
     /**
-     * @param \DateTime $createdAt
+     * @param DateTimeInterface $createdAt
      *
      * @return TimestampableInterface
      */
-    public function setCreatedAt(\DateTime $createdAt);
+    public function setCreatedAt(DateTimeInterface $createdAt);
 
     /**
-     * @return \DateTime
+     * @return DateTimeInterface
      */
-    public function getUpdatedAt();
+    public function getUpdatedAt(): ?DateTimeInterface;
 
     /**
-     * @param \DateTime $updatedAt
+     * @param DateTimeInterface $updatedAt
      *
      * @return TimestampableInterface
      */
-    public function setUpdatedAt(\DateTime $updatedAt);
+    public function setUpdatedAt(DateTimeInterface $updatedAt);
 }
