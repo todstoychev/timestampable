@@ -24,17 +24,17 @@ class TimestampableEventSubscriber implements EventSubscriber
     public function getSubscribedEvents()
     {
         return [
-            Events::postPersist,
-            Events::postUpdate,
+            Events::prePersist,
+            Events::preUpdate,
         ];
     }
 
-    public function postUpdate(LifecycleEventArgs $args)
+    public function preUpdate(LifecycleEventArgs $args)
     {
         $this->index($args);
     }
 
-    public function postPersist(LifecycleEventArgs $args)
+    public function prePersist(LifecycleEventArgs $args)
     {
         $this->index($args);
     }
