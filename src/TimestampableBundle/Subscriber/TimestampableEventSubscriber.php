@@ -4,7 +4,7 @@ namespace Todstoychev\TimestampableBundle\Subscriber;
 
 use DateTime;
 use Doctrine\Common\EventSubscriber;
-use Doctrine\Common\Persistence\Event\LifecycleEventArgs;
+use Doctrine\ORM\Event\LifecycleEventArgs;
 use Doctrine\ORM\Events;
 use Todstoychev\TimestampableBundle\Entity\TimestampableInterface;
 
