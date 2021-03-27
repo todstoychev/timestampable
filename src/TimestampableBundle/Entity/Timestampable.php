@@ -3,6 +3,7 @@
 namespace Todstoychev\TimestampableBundle\Entity;
 
 use DateTimeInterface;
+use Doctrine\ORM\Mapping as ORM;
 
 /**
  * Timestampable
@@ -13,11 +14,13 @@ use DateTimeInterface;
 trait Timestampable
 {
     /**
+     * @ORM\Column(type="datetime")
      * @var \DateTime
      */
     protected $createdAt;
 
     /**
+     * @ORM\Column(type="datetime")
      * @var \DateTime
      */
     protected $updatedAt;
