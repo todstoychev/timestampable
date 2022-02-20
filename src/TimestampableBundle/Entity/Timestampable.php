@@ -13,10 +13,10 @@ use Doctrine\ORM\Mapping as ORM;
  **/
 trait Timestampable
 {
-    #[ORM\Column(type: 'timestamp', nullable: false)]
+    #[ORM\Column(type: 'datetime', nullable: false)]
     protected $createdAt;
 
-    #[ORM\Column(type: 'timestamp', nullable: false)]
+    #[ORM\Column(type: 'datetime', nullable: false)]
     protected $updatedAt;
 
     /**
